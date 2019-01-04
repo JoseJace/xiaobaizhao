@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{
+				
+				border:10px solid red;
+				/*BFC bloack formatting context 块级格式化环境*/
+				/*当开启BFC后,元素具备以下特性:
+				1,父元素的垂直外边距不会和子元素重叠;
+				2,开启BFC的元素不会被浮动元素覆盖;
+				3,开启BFC的元素可以包含浮动的元素;*/
+				
+				/*如何开启BFC;
+				1,float: left;
+				2,display: inline-block;
+				3,position: absolute;
+				4,overflow: hidden;*/
+				
+				/*IE6:haslayout和BFC类似;*/
+				zoom:1;
+				overflow: hidden
+			}
+			.box2{
+				width: 100px;
+				height: 100px;
+				background: blue;
+				float: left;
+				
+			}
+			.box3{
+				width: 100%;
+				height: 50px;
+				background: yellow;
+				
+				margin-bottom: 300px;
+			
+			}
+			/*1*/
+			.box4{
+				width: 100px;
+				height: 100px;
+				background: blue;
+				overflow: hidden;
+				
+			}
+			.box5{
+				width: 50px;
+				height: 50px;
+				background: yellow;
+				margin-top: 50px;
+				
+			}
+			.box6{
+				width: 500px;
+				height: 100px;
+				background: red;
+			
+			}
+			/*2*/
+			.box7{
+				width: 100px;
+				height: 100px;
+				background: blue;
+				float: left;
+				
+			}
+			.box8{
+				width: 50px;
+				height: 50px;
+				background: yellow;
+				
+				
+			}
+			.box9{
+				width: 500px;
+				height: 100px;
+				background: red;
+				overflow: hidden;
+				/*clear:left;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="box2"></div>
+		</div>
+		<div class="box3"></div>
+		
+		阿
+		
+		<div class="box4">
+			<div class="box5"></div>
+		</div>
+		<div class="box6"></div>
+		啊
+		<div class="box7">
+			<div class="box8"></div>
+		</div>
+		<div class="box9"></div>
+	</body>
+</html>
